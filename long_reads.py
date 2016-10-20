@@ -21,6 +21,7 @@ for record in SeqIO.parse(handle, "fasta"):
     print(record.id)
     
     if len(str(record.seq)) > read_threshold:
+         output.write('>')
          output.write(record.id)
          output.write('\n')
          output.write(str(record.seq))
