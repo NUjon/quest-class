@@ -43,6 +43,7 @@ for record in SeqIO.parse(handle, "fastq"):
     print('the longest read for this record is', longest_read)
     print('it starts at', best_start, ' and ends at ', best_end)
 
+    output.write('>')
     output.write(record.id)
     output.write('\n')
     output.write(str(record.seq[best_start:best_end]))

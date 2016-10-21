@@ -6,6 +6,7 @@ filename = sys.argv[1]
 if (filename[-1] != 'a'):
     print("please enter a fasta file as the first argument.")
     sys.exit()
+
 file_prefix = filename.split('.')[0]
 output_file = file_prefix + '.report'
 
